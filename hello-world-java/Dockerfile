@@ -13,8 +13,11 @@ RUN mvn clean package
 FROM eclipse-temurin:17-jre
 WORKDIR /app
 
+# Expõe a porta 8080 para acesso externo
+EXPOSE 8080
+
 # Copia o JAR gerado do estágio anterior
 COPY --from=builder /app/target/*.jar app.jar
 
-# Comando para rodar o programa e manter o container ativo
+# Comando para rodar a aplicação
 CMD ["java", "-jar", "app.jar"]

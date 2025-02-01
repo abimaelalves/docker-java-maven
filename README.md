@@ -197,6 +197,21 @@ docker exec -it hello-java sh
 
 ---
 
+### 🏗️ **OBSERVACAO:: Sempre que fizer uma atualizacao nos arquivos de configuracao execute os passos abaixo**
+Execute o seguinte comando no terminal dentro do diretório do projeto:
+
+```sh
+cd hello-world-java && mvn clean package
+```
+
+### 🛠️ **Passo 2: Construir a Imagem Docker**
+
+```sh
+docker build -t hello-world-java .
+```
+
+---
+
 ## 🎉 **Conclusão**
 
 Agora você tem um container rodando uma aplicação Java com Maven que imprime "Hello, World!" e permanece em execução até ser explicitamente parado. Esse tutorial garante que qualquer pessoa possa replicar esse processo facilmente. 🚀
